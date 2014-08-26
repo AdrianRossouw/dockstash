@@ -1,6 +1,6 @@
 {
   "name": "dockstash",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A log management tool for Docker and Logstash",
   "bin": "./bin/dockstash",
   "directories": {
