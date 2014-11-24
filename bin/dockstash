@@ -62,7 +62,7 @@ function getContainers(host, fn) {
     url: url,
     json: true,
   }, function(err, res) {
-    fn(err, res.body);
+    fn(err, res && res.body);
   });
 }
 
@@ -75,7 +75,7 @@ function topContainer(host, containerId, fn) {
     url: url,
     json: true,
   }, function(err, res) {
-    fn(err, res.body);
+    fn(err, res && res.body);
   });
 }
 
