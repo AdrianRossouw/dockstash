@@ -92,7 +92,7 @@ function getLogStream(host, containerId) {
 }
 
 function prepareStreamHash(host, container, logReadStream) {
-  var nameTag = container.Image.split('/')[1];
+  var nameTag = container.Image.replace(/^.*\//, '');
   var parts = nameTag.split(':');
   return {
     host: host,
@@ -167,7 +167,7 @@ function getTopMessage(status) {
 }
 
 function prepareTopHash(host, container, item, titles) {
-  var nameTag = container.Image.split('/')[1];
+  var nameTag = container.Image.replace(/^.*\//, '');
   var parts = nameTag.split(':');
   var hash = {
     host: host,
